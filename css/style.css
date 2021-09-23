@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat Regular"), url("../fonts/montserrat-regular.woff2") format("woff2"), url("../fonts/montserrat-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat Medium"), url("../fonts/montserrat-medium.woff2") format("woff2"), url("../fonts/montserrat-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat SemiBold"), url("../fonts/montserrat-semibold.woff2") format("woff2"), url("../fonts/montserrat-semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat Bold"), url("../fonts/montserrat-bold.woff2") format("woff2"), url("../fonts/montserrat-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap; }
+
+:root {
+  --basic-white: #ffffff;
+  --basic-blacken: rgba(20, 21, 23, 1);
+  --basic-black: rgba(44, 46, 63, 1);
+  --basic-black-lighten: rgba(44, 46, 63, 0.7);
+  --basic-orange: rgba(254, 120, 101, 1);
+  --basic-cream: rgba(251, 248, 248, 1);
+  --special-orange: rgba(241, 125, 75, 1);
+  --special-grey: rgba(190, 194, 204, 1);
+  --special-greyen: rgba(20, 21, 23, 0.5);
+  --special-grey-lighten: rgba(215, 217, 223, 1);
+  --special-grey-whiten: rgba(20, 21, 23, 0.7);
+  --special-black-shadow: rgba(41, 54, 66, 0.1);
+  --special-black-lighten: rgba(44, 46, 63, 0.3); }
+
+html {
+  box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+img {
+  max-width: 100%; }
+
+a {
+  text-decoration: none; }
