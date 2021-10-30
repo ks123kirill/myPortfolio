@@ -1,0 +1,16 @@
+.wrapper {
+  padding: 0 15px;
+  outline: 1px dotted yellowgreen;
+}
+
+@media (min-width: $tablet-width) {
+  .wrapper {
+    padding: 0 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .wrapper {
+    padding: 0 30px;
+  }
+}

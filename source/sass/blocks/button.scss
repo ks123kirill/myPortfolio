@@ -1,0 +1,23 @@
+.button {
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 0;
+
+  &--modal {
+    background-color: var(--basic-color2);
+    padding: 15px 40px;
+    margin: 10px 0;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.9;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}

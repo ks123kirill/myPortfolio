@@ -1,0 +1,36 @@
+:root {
+  --basic-white: rgba(255, 255, 255, 1);
+  --basic-black: rgba(0, 0, 0, 1);
+  --basic-color1: rgba(181, 195, 214, 1);
+  --basic-color2: rgba(197, 213, 232, 1);
+  --basic-color3: rgb(255, 222, 176, 1);
+  --basic-color4: rgb(249, 229, 209, 1);
+  --basic-color5: rgb(242, 202, 170, 1);
+
+  //   --basic-black-light: rgba(19, 19, 20, 1);
+  //   --basic-black-lighten: rgba(31, 31, 31, 1);
+  //   --basic-green: rgba(10, 217, 198, 1);
+  --basic-grey: rgba(246, 247, 249, 1);
+
+  //   --special-black: rgba(0, 0, 0, 0.7);
+  //   --special-black-light: rgba(0, 0, 0, 0.5);
+  //   --special-black-lighten: rgba(31, 31, 31, 0.5);
+  //   --special-grey: rgba(20, 21, 23, 0.2);
+  --special-grey-light: rgba(72, 73, 77, 1);
+  --special-grey-lighten: rgb(201, 204, 212, 1);
+  //   --special-white: rgba(255, 255, 255, 0.2);
+}
+
+$font-family-basic: "Montserrat", "Arial", sans-serif;
+$desktop-width: 1024px; // от 1024px и выше
+$tablet-width: 768px; // 768px - 1023px;
+$mobile-width: 320px; // 320px - 767px;
+
+@mixin footer-heading() {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  color: var(--basic-blacken);
+  padding: 0;
+  margin: 0;
+}
