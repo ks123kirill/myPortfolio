@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <title>my portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/montserrat-semibold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/montserrat-medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin> -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="stylesheet" href="css/style.min.css">
+    <!-- <link rel="icon" href="favicon.ico"> -->
+  </head>
+
+  <body class="page-body">
+    <header class="main-header">
+      <div class="main-header__wrapper">
+        <a class="main-header__logo" href="#" aria-label="Ссылка на главную страницу сайта Pink">KS
+        </a>
+        <nav class="main-nav main-nav--no-js">
+          <button class="button main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#about-me">Обо мне</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#last-works">Последние работы</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">Портфолио</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <h1 class="visually-hidden">Портфолио фронтенд-разработчика Кирилла Скорописцева</h1>
+
+      <section class="promo">
+        <h2 class="visually-hidden">Аватарка</h2>
+        <div class="promo__avatar">
+          <img src="img/kirill-opacity.png" width="120" height="120" alt="">
+        </div>
+      </section>
+
+      <section class="about-me wrapper" id="about-me">
+        <h2 class="visually-hidden">Обо мне</h2>
+        <button class="button promo__button" type="button">Скачать CV</button>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi impedit esse, doloremque debitis adipisci error aliquid neque corporis commodi eaque possimus? Reiciendis aliquam consequuntur nostrum a, labore atque ipsum impedit doloremque ratione expedita nemo vitae facere illum odit quo perspiciatis. Dolorem error recusandae tempore in! Facilis unde voluptatum ipsa alias.</p>
+      </section>
+
+      <section class="last-works" id="last-works">
+        <h2>Последние работы</h2>
+
+        <div class="slider">
+          <div class="slider__container">
+            <div class="slider__wrapper">
+
+              <ul class="last-works__list slider__items">
+                <li class="last-works__item slider__item">
+                  <picture>
+                    <source type="image/webp" srcset="img/pink.webp 1x">
+                    <img class="last-works__img" src="img/pink.png" width="288" height="375"  data-work="pink" alt="">
+                  </picture>
+                  <div class="last-works__popap" data-work="pink">
+                    <h3 class="last-works__title">Pink</h3>
+                    <p class="last-works__description">Приложение для раскрашивания фотографий</p>
+                    <p class="last-works__heading">Описание:</p>
+
+                    <ul class="last-works__specification">
+                      <li>Верстка 3х страниц</li>
+                      <li>HTML5, CSS3, mobile first, responsive design</li>
+                      <li>Методология: БЭМ</li>
+                      <li>Препроцессор: Less</li>
+                      <li>Сборщик: Gulp</li>
+                    </ul>
+                    <a class="last-works__link last-works__link--demo" href="https://ks123kirill.github.io/pink/">Посмотреть демо</a>
+                    <a class="last-works__link last-works__link--repo" href="https://github.com/ks123kirill/pink">Посмотреть репозиторий</a>
+                  </div>
+                  <button id="show-modal" class="button button--modal last-works__button" data-project-name="pink">Узнать больше</button>
+                </li>
+
+                <li class="last-works__item slider__item">
+                  <picture>
+                    <source type="image/webp" srcset="img/bikes.webp 1x">
+                    <img class="last-works__img" src="img/bikes.png" width="288" height="375"  data-work="bikes" alt="">
+                  </picture>
+                  <div class="last-works__popap" data-work="pink">
+                    <h3 class="last-works__title">Bikes</h3>
+                    <p class="last-works__description">Магазин по продаже крутых велосипедов</p>
+                    <p class="last-works__heading">Описание:</p>
+                    <ul class="last-works__specification">
+                      <li>Верстка 1й страницы</li>
+                      <li>HTML5, CSS3, desktop first, responsive design</li>
+                      <li>Методология: БЭМ</li>
+                      <li>Препроцессор: Sass</li>
+                      <li>Сборщик: Gulp</li>
+                    </ul>
+                    <a class="last-works__link last-works__link--demo" href="https://ks123kirill.github.io/bikes/">Посмотреть демо</a>
+                    <a class="last-works__link last-works__link--repo" href="https://github.com/ks123kirill/bikes">Посмотреть репозиторий</a>
+                  </div>
+                  <button id="show-modal" class="button button--modal last-works__button" data-project-name="bikes">Узнать больше</button>
+                </li>
+
+                <li class="last-works__item slider__item">
+                  <picture>
+                    <source type="image/webp" srcset="img/keksobooking.webp 1x">
+                    <img class="last-works__img" src="img/keksobooking.png" width="288" height="375" data-work="keksobooking" alt="">
+                  </picture>
+                  <div class="last-works__popap" data-work="keksobooking">
+                    <h3 class="last-works__title">Keksobooking</h3>
+                    <p class="last-works__description">Cервис размещения объявлений о сдаче в аренду недвижимости</p>
+                    <p class="last-works__heading">Описание:</p>
+                    <ul class="last-works__specification">
+                      <li>Разработка веб-интерфейса</li>
+                      <li>Использование модулей ECMAScript</li>
+                      <li>Использование Fetch API</li>
+                      <li>Использование Leaflet API - картографический сервис</li>
+                      <li>Валидация формы</li>
+                    </ul>
+                    <a class="last-works__link last-works__link--demo" href="https://ks123kirill.github.io/keksobooking/">Посмотреть демо</a>
+                    <a class="last-works__link last-works__link--repo" href="https://github.com/ks123kirill/keksobooking">Посмотреть репозиторий</a>
+                  </div>
+                  <button id="show-modal" class="button button--modal last-works__button" data-project-name="keksobooking">Узнать больше</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Кнопки для перехода к предыдущему и следующему слайду -->
+          <a href="#" class="slider__control" data-slide="prev"></a>
+          <a href="#" class="slider__control" data-slide="next"></a>
+          <ol class="slider__indicators last-works__indicators">
+             <li data-slide-to="0"></li>
+             <li data-slide-to="1"></li>
+             <li data-slide-to="2"></li>
+          </ol>
+       </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem mollitia perspiciatis expedita consequatur, aliquam hic sint asperiores reprehenderit, ratione reiciendis eligendi sequi autem harum ipsum corporis fugiat cumque eum soluta!</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem mollitia perspiciatis expedita consequatur, aliquam hic sint asperiores reprehenderit, ratione reiciendis eligendi sequi autem harum ipsum corporis fugiat cumque eum soluta!</p>
+    </footer>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+
+    <div class="modal">
+      <div class="modal__backdrop" data-dismiss="modal">
+        <div class="modal__content">
+          <div class="modal__header">
+            <div class="modal__title" data-modal="title">Новое окно</div>
+            <span class="modal__btn-close" data-dismiss="modal" title="Закрыть">×</span>
+          </div>
+            <div class="modal__body" data-modal="content"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/modal.js"></script>
+    <script src="js/script.js" type="module"></script>
+  </body>
+</html>
