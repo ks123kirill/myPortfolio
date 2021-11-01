@@ -1,6 +1,7 @@
 .wrapper {
   padding: 0 15px;
-  outline: 1px dotted yellowgreen;
+  margin: 0 auto;
+  // outline: 1px dotted yellowgreen;
 }
 
 @media (min-width: $tablet-width) {
@@ -11,6 +12,7 @@
 
 @media (min-width: $desktop-width) {
   .wrapper {
+    max-width: $desktop-width;
     padding: 0 30px;
   }
 }

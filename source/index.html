@@ -17,22 +17,22 @@
   <body class="page-body">
     <header class="main-header">
       <div class="main-header__wrapper">
-        <a class="main-header__logo" href="#" aria-label="Ссылка на главную страницу сайта Pink">KS
+        <a class="main-header__logo" aria-label="Ссылка на главную страницу сайта">KS
         </a>
         <nav class="main-nav main-nav--no-js">
           <button class="button main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a class="main-nav__link" href="#about-me">Обо мне</a>
+              <a class="main-nav__link" href="#about">Обо мне</a>
             </li>
             <li class="main-nav__item">
               <a class="main-nav__link" href="#last-works">Последние работы</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Портфолио</a>
+              <a class="main-nav__link" href="#catalog">Портфолио</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Контакты</a>
+              <a class="main-nav__link" href="#contacts">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -40,19 +40,19 @@
     </header>
 
     <main class="page-main">
-      <h1 class="visually-hidden">Портфолио фронтенд-разработчика Кирилла Скорописцева</h1>
+      <h1 class="visually-hidden">Портфолио фронтенд-разработчик Кирилл Скорописцев</h1>
 
       <section class="promo">
         <h2 class="visually-hidden">Аватарка</h2>
-        <div class="promo__avatar">
-          <img src="img/kirill-opacity.png" width="120" height="120" alt="">
+        <div class="promo__avatar" id="about">
+          <img class="promo__img" src="img/kirill-opacity.png" width="120" height="120" alt="Аватарка Кирилла Скорописцева">
         </div>
       </section>
 
-      <section class="about-me wrapper" id="about-me">
-        <h2 class="visually-hidden">Обо мне</h2>
-        <button class="button promo__button" type="button">Скачать CV</button>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi impedit esse, doloremque debitis adipisci error aliquid neque corporis commodi eaque possimus? Reiciendis aliquam consequuntur nostrum a, labore atque ipsum impedit doloremque ratione expedita nemo vitae facere illum odit quo perspiciatis. Dolorem error recusandae tempore in! Facilis unde voluptatum ipsa alias.</p>
+      <section class="about wrapper">
+        <h2 class="about__heading">Обо мне</h2>
+        <p class="about__text">Привет!<br> Меня зовут Кирилл Скорописцев и я HTML-верстальщик.<br> Верстаю семантично, забочусь о доступности, использую препроцессоры, умею работать с шаблонизаторами, английский знаю на уровне B1. Мне нравится изучать новые технологии и применять их на практике.</p>
+        <a class="button button--about about__link" href="CV-test-2.pdf" download>Скачать CV</a>
       </section>
 
       <section class="last-works" id="last-works">
