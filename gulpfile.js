@@ -108,6 +108,7 @@ const copy = (done) => {
     "source/js/modal.js",
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
+    "source/*.pdf",
     "source/img/**/*.svg",
     "!source/img/icons/*.svg",
     "source/*.webmanifest"
@@ -179,7 +180,6 @@ exports.build = build;
 // ghpages.publish("build", function () {});
 
 // Default
-
 exports.default = gulp.series(
   clean,
   copy,

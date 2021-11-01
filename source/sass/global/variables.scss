@@ -8,7 +8,7 @@
   --basic-color5: rgb(242, 202, 170, 1);
 
   //   --basic-black-light: rgba(19, 19, 20, 1);
-  //   --basic-black-lighten: rgba(31, 31, 31, 1);
+  --basic-black-lighten: rgba(44, 46, 63, 0.9);
   //   --basic-green: rgba(10, 217, 198, 1);
   --basic-grey: rgba(246, 247, 249, 1);
 
@@ -26,11 +26,19 @@ $desktop-width: 1024px; // от 1024px и выше
 $tablet-width: 768px; // 768px - 1023px;
 $mobile-width: 320px; // 320px - 767px;
 
-@mixin footer-heading() {
+@mixin heading-s() {
   font-weight: 600;
-  font-size: 18px;
-  line-height: 32px;
-  color: var(--basic-blacken);
-  padding: 0;
-  margin: 0;
+  font-size: 24px;
+  line-height: 36px;
+  color: var(--basic-black);
+}
+
+@mixin heading-m() {
+  font-size: 30px;
+  line-height: 45px;
+}
+
+@mixin heading-l() {
+  font-size: 55px;
+  line-height: 80px;
 }
