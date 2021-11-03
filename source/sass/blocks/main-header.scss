@@ -15,22 +15,28 @@
   display: inline-block;
   position: relative;
   z-index: 900;
+  line-height: 20px;
   color: var(--basic-color1);
   border: 3px solid var(--basic-color1);
   border-radius: 50%;
   padding: 10px;
   margin-left: 10px;
-  margin-top: 3px;
+  margin-top: 8px;
 }
 
 @media (min-width: $desktop-width) {
   .main-header__wrapper {
-    max-width: $desktop-width;
+    max-width: 924px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 5px 30px;
     margin: 0 auto;
+  }
+
+  .main-header__logo {
+    margin-top: 4px;
+    margin-left: 0;
   }
 }
