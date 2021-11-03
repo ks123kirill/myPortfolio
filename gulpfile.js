@@ -110,6 +110,7 @@ const copy = (done) => {
     "source/*.ico",
     "source/*.pdf",
     "source/img/**/*.svg",
+    "source/img/**/*.gif",
     "!source/img/icons/*.svg",
     "source/*.webmanifest"
   ], {

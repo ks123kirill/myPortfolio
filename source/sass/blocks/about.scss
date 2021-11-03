@@ -1,18 +1,18 @@
 .about {
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
 }
 
 .about__heading {
   @include heading-s();
-  text-align: left;
-  margin: 0;
+  padding-bottom: 10px;
+  margin: 0 auto;
 }
 
 .about__text {
-  text-align: left;
   color: var(--basic-black-lighten);
-  margin: 0;
+  padding-bottom: 10px;
+  margin: 0 auto;
 }
 
 .about__link {
@@ -23,12 +23,24 @@
 @media (min-width: $tablet-width) {
   .about__heading {
     @include heading-m();
+    max-width: 626px;
+  }
+
+  .about__text {
+    max-width: 626px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .about__heading {
     @include heading-l();
+    max-width: 924px;
+    padding-bottom: 0;
+  }
+
+  .about__text {
+    max-width: 924px;
+    font-size: 18px;
   }
 }
 //////////

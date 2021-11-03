@@ -28,9 +28,9 @@
             <li class="main-nav__item">
               <a class="main-nav__link" href="#last-works">Последние работы</a>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#catalog">Портфолио</a>
-            </li>
+            <!-- <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html">Портфолио</a>
+            </li> -->
             <li class="main-nav__item">
               <a class="main-nav__link" href="#contacts">Контакты</a>
             </li>
@@ -57,96 +57,86 @@
 
       <section class="last-works" id="last-works">
         <h2>Последние работы</h2>
+          <ul class="last-works__list">
 
-        <div class="slider">
-          <div class="slider__container">
-            <div class="slider__wrapper">
+            <li class="last-works__item">
 
-              <ul class="last-works__list slider__items">
-                <li class="last-works__item slider__item">
-                  <picture>
-                    <source type="image/webp" srcset="img/pink.webp 1x">
-                    <img class="last-works__img" src="img/pink.png" width="288" height="375"  data-work="pink" alt="">
-                  </picture>
-                  <div class="last-works__popap" data-work="pink">
-                    <h3 class="last-works__title">Pink</h3>
-                    <p class="last-works__description">Приложение для раскрашивания фотографий</p>
-                    <p class="last-works__heading">Описание:</p>
+              <picture>
+                <source type="image/webp" srcset="img/pink.webp 1x">
+                <img class="last-works__img" src="img/pink.png" width="288" height="375" alt="">
+              </picture>
 
-                    <ul class="last-works__specification">
-                      <li>Верстка 3х страниц</li>
-                      <li>HTML5, CSS3, mobile first, responsive design</li>
-                      <li>Методология: БЭМ</li>
-                      <li>Препроцессор: Less</li>
-                      <li>Сборщик: Gulp</li>
-                    </ul>
-                    <a class="last-works__link last-works__link--demo" href="https://ks123kirill.github.io/pink/">Посмотреть демо</a>
-                    <a class="last-works__link last-works__link--repo" href="https://github.com/ks123kirill/pink">Посмотреть репозиторий</a>
-                  </div>
-                  <button id="show-modal" class="button button--modal last-works__button" data-project-name="pink">Узнать больше</button>
-                </li>
+              <div class="last-works__block">
+                <h3 class="last-works__title">Pink</h3>
+                <p class="last-works__description">Приложение для раскрашивания фотографий</p>
+                <p class="last-works__heading">Описание:</p>
 
-                <li class="last-works__item slider__item">
-                  <picture>
-                    <source type="image/webp" srcset="img/bikes.webp 1x">
-                    <img class="last-works__img" src="img/bikes.png" width="288" height="375"  data-work="bikes" alt="">
-                  </picture>
-                  <div class="last-works__popap" data-work="pink">
-                    <h3 class="last-works__title">Bikes</h3>
-                    <p class="last-works__description">Магазин по продаже крутых велосипедов</p>
-                    <p class="last-works__heading">Описание:</p>
-                    <ul class="last-works__specification">
-                      <li>Верстка 1й страницы</li>
-                      <li>HTML5, CSS3, desktop first, responsive design</li>
-                      <li>Методология: БЭМ</li>
-                      <li>Препроцессор: Sass</li>
-                      <li>Сборщик: Gulp</li>
-                    </ul>
-                    <a class="last-works__link last-works__link--demo" href="https://ks123kirill.github.io/bikes/">Посмотреть демо</a>
-                    <a class="last-works__link last-works__link--repo" href="https://github.com/ks123kirill/bikes">Посмотреть репозиторий</a>
-                  </div>
-                  <button id="show-modal" class="button button--modal last-works__button" data-project-name="bikes">Узнать больше</button>
-                </li>
+                <ul class="last-works__specification">
+                  <li>Верстка 3х страниц</li>
+                  <li>HTML5, CSS3, mobile first, responsive design</li>
+                  <li>Методология: БЭМ</li>
+                  <li>Препроцессор: Less</li>
+                  <li>Сборщик: Gulp</li>
+                </ul>
+                <a class="last-works__link last-works__link--demo" href="https://ks123kirill.github.io/pink/">Посмотреть демо</a>
+                <a class="last-works__link last-works__link--repo" href="https://github.com/ks123kirill/pink">Посмотреть репозиторий</a>
+              </div>
+              <button id="show-modal" class="button button--modal last-works__button" data-project-name="pink">Узнать больше</button>
+            </li>
 
-                <li class="last-works__item slider__item">
-                  <picture>
-                    <source type="image/webp" srcset="img/keksobooking.webp 1x">
-                    <img class="last-works__img" src="img/keksobooking.png" width="288" height="375" data-work="keksobooking" alt="">
-                  </picture>
-                  <div class="last-works__popap" data-work="keksobooking">
-                    <h3 class="last-works__title">Keksobooking</h3>
-                    <p class="last-works__description">Cервис размещения объявлений о сдаче в аренду недвижимости</p>
-                    <p class="last-works__heading">Описание:</p>
-                    <ul class="last-works__specification">
-                      <li>Разработка веб-интерфейса</li>
-                      <li>Использование модулей ECMAScript</li>
-                      <li>Использование Fetch API</li>
-                      <li>Использование Leaflet API - картографический сервис</li>
-                      <li>Валидация формы</li>
-                    </ul>
-                    <a class="last-works__link last-works__link--demo" href="https://ks123kirill.github.io/keksobooking/">Посмотреть демо</a>
-                    <a class="last-works__link last-works__link--repo" href="https://github.com/ks123kirill/keksobooking">Посмотреть репозиторий</a>
-                  </div>
-                  <button id="show-modal" class="button button--modal last-works__button" data-project-name="keksobooking">Узнать больше</button>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <!-- Кнопки для перехода к предыдущему и следующему слайду -->
-          <a href="#" class="slider__control" data-slide="prev"></a>
-          <a href="#" class="slider__control" data-slide="next"></a>
-          <ol class="slider__indicators last-works__indicators">
-             <li data-slide-to="0"></li>
-             <li data-slide-to="1"></li>
-             <li data-slide-to="2"></li>
-          </ol>
-       </div>
+            <li class="last-works__item">
+
+              <picture>
+                <source type="image/webp" srcset="img/bikes.webp 1x">
+                <img class="last-works__img" src="img/bikes.png" width="288" height="375"  data-work="bikes" alt="">
+              </picture>
+
+              <div class="last-works__block">
+                <h3 class="last-works__title">Bikes</h3>
+                <p class="last-works__description">Магазин по продаже крутых велосипедов</p>
+                <p class="last-works__heading">Описание:</p>
+                <ul class="last-works__specification">
+                  <li>Верстка 1й страницы</li>
+                  <li>HTML5, CSS3, desktop first, responsive design</li>
+                  <li>Методология: БЭМ</li>
+                  <li>Препроцессор: Sass</li>
+                  <li>Сборщик: Gulp</li>
+                </ul>
+                <a class="last-works__link last-works__link--demo" href="https://ks123kirill.github.io/bikes/">Посмотреть демо</a>
+                <a class="last-works__link last-works__link--repo" href="https://github.com/ks123kirill/bikes">Посмотреть репозиторий</a>
+              </div>
+              <button id="show-modal" class="button button--modal last-works__button" data-project-name="bikes">Узнать больше</button>
+            </li>
+
+            <li class="last-works__item">
+
+              <picture>
+                <source type="image/webp" srcset="img/keksobooking.webp 1x">
+                <img class="last-works__img" src="img/keksobooking.png" width="288" height="375" data-work="keksobooking" alt="">
+              </picture>
+
+              <div class="last-works__block">
+                <h3 class="last-works__title">Keksobooking</h3>
+                <p class="last-works__description">Cервис размещения объявлений о сдаче в аренду недвижимости</p>
+                <p class="last-works__heading">Описание:</p>
+                <ul class="last-works__specification">
+                  <li>Разработка веб-интерфейса</li>
+                  <li>Использование модулей ECMAScript</li>
+                  <li>Использование Fetch API</li>
+                  <li>Использование Leaflet API - картографический сервис</li>
+                  <li>Валидация формы</li>
+                </ul>
+                <a class="last-works__link last-works__link--demo" href="https://ks123kirill.github.io/keksobooking/">Посмотреть демо</a>
+                <a class="last-works__link last-works__link--repo" href="https://github.com/ks123kirill/keksobooking">Посмотреть репозиторий</a>
+              </div>
+              <button id="show-modal" class="button button--modal last-works__button" data-project-name="keksobooking">Узнать больше</button>
+            </li>
+          </ul>
       </section>
     </main>
 
     <footer>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem mollitia perspiciatis expedita consequatur, aliquam hic sint asperiores reprehenderit, ratione reiciendis eligendi sequi autem harum ipsum corporis fugiat cumque eum soluta!</p>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem mollitia perspiciatis expedita consequatur, aliquam hic sint asperiores reprehenderit, ratione reiciendis eligendi sequi autem harum ipsum corporis fugiat cumque eum soluta!</p>
+
     </footer>
 
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
