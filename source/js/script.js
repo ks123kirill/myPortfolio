@@ -1,6 +1,3 @@
-// import {getSlider} from './chief-slider.min.js';
-// import {getSlider} from './chief-slider.js';
-
 const getNavJs = function () {
   const pageBody = document.querySelector('.page-body');
   const navMain = pageBody.querySelector('.main-nav');
@@ -50,33 +47,5 @@ const getSmoothLinks = function () {
   });
 };
 
-const isSlider = function () {
-  /* isSlider() - Слайдер работает только до 767px */
-  if (window.matchMedia("screen and (max-width: 767px)").matches) {
-    getSlider();
-  }
-};
-
-// const getResize = function () {
-// /* getResize() - При изменении ширины окна браузера в режиме DevTools после 767px убирает настройки Слайдера */
-//   const tabletWidth = 768;
-
-//   if (window.innerWidth >= tabletWidth) {
-
-//     const lastWorksList = document.querySelector('.last-works__list');
-//     const lastWorksItems = lastWorksList.querySelectorAll('.last-works__item');
-
-//     const noTranslate = 'translateX(0px)';
-
-//     lastWorksList.style.transform = noTranslate;
-//     lastWorksItems.forEach((item) => {
-//       item.style.transform = noTranslate;
-//     });
-//   }
-// };
-
-// window.addEventListener("resize", getResize);
-
 getNavJs();
-// isSlider();
-// getSmoothLinks();
+getSmoothLinks();

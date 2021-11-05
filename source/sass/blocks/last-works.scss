@@ -1,6 +1,6 @@
 .last-works {
   background-color: var(--basic-grey);
-  padding: 30px 0;
+  padding: 30px 0 20px 0;
 }
 
 .last-works h2 {
@@ -176,10 +176,11 @@
   }
 
   .last-works__list {
-    max-width: 924px;
+    max-width: $desktop-width;
     display: grid;
     grid-template-columns: 288px 288px 288px;
-    gap: 20px 30px;
+    gap: 20px 50px;
+    padding: 0 30px;
     margin: 0 auto;
   }
 
