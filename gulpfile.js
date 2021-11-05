@@ -104,13 +104,11 @@ exports.sprite = sprite;
 
 const copy = (done) => {
   gulp.src([
-    "source/js/chief-slider.js",
     "source/js/modal.js",
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
     "source/*.pdf",
     "source/img/**/*.svg",
-    "source/img/**/*.gif",
     "!source/img/icons/*.svg",
     "source/*.webmanifest"
   ], {
