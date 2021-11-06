@@ -1,6 +1,6 @@
 .about {
-  padding-top: 10px;
-  padding-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 50px;
 }
 
 .about__heading {
@@ -21,9 +21,15 @@
 }
 
 @media (min-width: $tablet-width) {
+  .about {
+    padding-top: 20px;
+    padding-bottom: 80px;
+  }
+
   .about__heading {
     @include heading-m();
     max-width: 626px;
+    padding-bottom: 30px;
   }
 
   .about__text {
@@ -32,10 +38,14 @@
 }
 
 @media (min-width: $desktop-width) {
+  .about {
+    padding-top: 20px;
+    padding-bottom: 100px;
+  }
+
   .about__heading {
     @include heading-l();
     max-width: 924px;
-    padding-bottom: 0;
   }
 
   .about__text {

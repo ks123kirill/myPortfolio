@@ -13,7 +13,7 @@ const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
 const sync = require("browser-sync").create();
-// const ghpages = require('gh-pages');
+const ghpages = require('gh-pages');
 
 // Styles
 
@@ -49,8 +49,8 @@ const scripts = () => {
   return gulp.src("source/js/*.js")
     .pipe(gulp.dest("build/js"))
     .pipe(terser())
-    // .pipe(rename("script.min.js"))
-    // .pipe(gulp.dest("build/js"))
+    .pipe(rename("script.min.js"))
+    .pipe(gulp.dest("build/js"))
     .pipe(sync.stream());
 }
 
@@ -104,7 +104,7 @@ exports.sprite = sprite;
 
 const copy = (done) => {
   gulp.src([
-    "source/js/modal.js",
+    "source/js/modal.min.js",
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
     "source/*.pdf",
@@ -176,7 +176,7 @@ const build = gulp.series(
 exports.build = build;
 
 // gh-pages
-// ghpages.publish("build", function () {});
+ghpages.publish("build", function () {});
 
 // Default
 exports.default = gulp.series(

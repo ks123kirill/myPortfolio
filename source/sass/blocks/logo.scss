@@ -1,0 +1,35 @@
+.logo {
+  min-height: 60px;
+  padding: 5px 15px 5px 15px;
+}
+
+.logo__link {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  z-index: 900;
+  // line-height: 20px;
+  // color: var(--basic-color1);
+  // border: 3px solid var(--basic-color1);
+  // border-radius: 50%;
+  pointer-events: none;
+  // padding: 10px;
+}
+
+.logo__link img {
+  display: block;
+}
+
+
+@media (min-width: $tablet-width) {
+  .logo {
+    padding: 5px 20px 5px 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .logo {
+    min-height: initial;
+    padding: 0;
+  }
+}

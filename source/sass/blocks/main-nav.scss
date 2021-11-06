@@ -1,12 +1,12 @@
 .main-nav__toggle {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 15px;
   z-index: 2;
   width: 60px;
   height: 60px;
   display: block;
-  background-color: var(--basic-color1);
+  background-color: transparent;
   transition: background-color 1s ease 0.2s;
 }
 
@@ -15,7 +15,7 @@
     content: "";
     position: absolute;
     top: 18px;
-    right: 5px;
+    right: 0;
     width: 50px;
     height: 4px;
     background-color: var(--basic-black);
@@ -36,7 +36,7 @@
     position: absolute;
     content: "";
     top: 27px;
-    right: 15px;
+    right: 0;
     width: 30px;
     height: 4px;
     background-color: var(--basic-color1);
@@ -80,8 +80,8 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 28px;
-  color: var(--special-grey-light);
-  transition: 0.3s ease;
+  color: var(--basic-black-lighten);
+  transition: all 0.3s ease;
   padding-left: 15px;
   margin: 0;
 
@@ -93,7 +93,7 @@
     right: 20px;
     width: 12px;
     height: 16px;
-    background-image: url("../img/shape.svg");
+    background-image: url("../img/shape-right.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -106,6 +106,12 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav__toggle {
+    right: 20px;
   }
 }
 
@@ -138,11 +144,11 @@
     flex-wrap: wrap;
     justify-content: space-around;
     background-color: transparent;
-    padding-top: 18px;
+    padding-top: 0;
 
     .main-nav__item {
       background-color: transparent;
-      margin: 0 40px 0 40px;
+      margin: 0 50px 0 50px;
     }
 
     .main-nav__item:last-of-type {
@@ -160,7 +166,7 @@
     line-height: 18px;
     text-transform: none;
     box-shadow: none;
-    padding-bottom: 13px;
+    padding: 10px 0;
 
     &::after {
       display: none;

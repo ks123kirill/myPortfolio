@@ -1,26 +1,35 @@
 <!doctype html>
 <html lang="ru">
   <head>
-    <title>my portfolio</title>
+    <title>Portfolio - Kirill Skoropistsev</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Портфолио HTML-верстальщика Кирилл Скорописцев">
+    <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/montserrat-semibold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/montserrat-medium.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin> -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="img/polygon.png" as="image" media="(min-width: 320px)">
     <link rel="preload" href="css/style.min.css" as="style">
     <link rel="stylesheet" href="css/style.min.css">
-    <!-- <link rel="icon" href="favicon.ico"> -->
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicon/favicon-32x32.png" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon/favicon-180x180.png">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
 
   <body class="page-body">
     <header class="main-header">
       <div class="main-header__wrapper">
-        <a class="main-header__logo" aria-label="Ссылка на главную страницу сайта">KS
-        </a>
+        <div class="logo main-header__logo">
+          <a class="logo__link" aria-label="Ссылка на главную страницу сайта">
+            <img src="img/icon-logo.svg" width="50" height="50" alt="Логотип: буквы KS в окружности">
+          </a>
+        </div>
         <nav class="main-nav main-nav--no-js">
           <button class="button main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a class="main-nav__link" href="#about">Обо мне</a>
@@ -28,9 +37,6 @@
             <li class="main-nav__item">
               <a class="main-nav__link" href="#last-works">Последние работы</a>
             </li>
-            <!-- <li class="main-nav__item">
-              <a class="main-nav__link" href="catalog.html">Портфолио</a>
-            </li> -->
             <li class="main-nav__item">
               <a class="main-nav__link" href="#contacts">Контакты</a>
             </li>
@@ -40,12 +46,15 @@
     </header>
 
     <main class="page-main">
-      <h1 class="visually-hidden">Портфолио фронтенд-разработчик Кирилл Скорописцев</h1>
+      <h1 class="visually-hidden">Портфолио HTML-верстальщика Кирилл Скорописцев</h1>
 
       <section class="promo">
         <h2 class="visually-hidden">Аватарка</h2>
         <div class="promo__avatar" id="about">
-          <img class="promo__img" src="img/kirill-opacity.png" width="120" height="120" alt="Аватарка Кирилла Скорописцева">
+          <picture>
+            <source type="image/webp" srcset="img/kirill-avatar.webp 1x">
+            <img class="promo__img" src="img/kirill-avatar.png" width="120" height="120" alt="Аватарка Кирилл Скорописцев">
+          </picture>
         </div>
       </section>
 
@@ -57,13 +66,16 @@
 
       <section class="last-works" id="last-works">
         <h2>Последние работы</h2>
-          <ul class="last-works__list">
 
+          <ul class="last-works__list">
             <li class="last-works__item">
 
               <picture>
-                <source type="image/webp" srcset="img/pink.webp 1x">
-                <img class="last-works__img" src="img/pink.png" width="288" height="375" alt="">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/pink-large.webp 1x">
+                <source type="image/webp" srcset="img/pink-sm.webp 1x">
+
+                <source media="(min-width: 768px)" srcset="img/pink-large.jpg 1x">
+                <img class="last-works__img" src="img/pink-sm.jpg" width="288" height="310" loading="lazy" alt="Телефон в руке, на экране телефона здание в розовым фоне">
               </picture>
 
               <div class="last-works__block">
@@ -81,14 +93,17 @@
                 <a class="last-works__link last-works__link--demo" href="https://ks123kirill.github.io/pink/">Посмотреть демо</a>
                 <a class="last-works__link last-works__link--repo" href="https://github.com/ks123kirill/pink">Посмотреть репозиторий</a>
               </div>
-              <button id="show-modal" class="button button--modal last-works__button" data-project-name="pink">Узнать больше</button>
+              <button type="button" class="button button--modal last-works__button" data-project-name="pink">Pink &ndash; веб-приложение</button>
             </li>
 
             <li class="last-works__item">
 
               <picture>
-                <source type="image/webp" srcset="img/bikes.webp 1x">
-                <img class="last-works__img" src="img/bikes.png" width="288" height="375"  data-work="bikes" alt="">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/bikes-large.webp 1x">
+                <source type="image/webp" srcset="img/bikes-sm.webp 1x">
+
+                <source media="(min-width: 768px)" srcset="img/bikes-large.jpg 1x">
+                <img class="last-works__img" src="img/bikes-sm.jpg" width="288" height="310" loading="lazy" alt="Форма заявки обратной связи на темном фоне с изображение велосипеда">
               </picture>
 
               <div class="last-works__block">
@@ -105,14 +120,17 @@
                 <a class="last-works__link last-works__link--demo" href="https://ks123kirill.github.io/bikes/">Посмотреть демо</a>
                 <a class="last-works__link last-works__link--repo" href="https://github.com/ks123kirill/bikes">Посмотреть репозиторий</a>
               </div>
-              <button id="show-modal" class="button button--modal last-works__button" data-project-name="bikes">Узнать больше</button>
+              <button type="button" class="button button--modal last-works__button" data-project-name="bikes">Bikes &ndash; интернет магазин</button>
             </li>
 
             <li class="last-works__item">
 
               <picture>
-                <source type="image/webp" srcset="img/keksobooking.webp 1x">
-                <img class="last-works__img" src="img/keksobooking.png" width="288" height="375" data-work="keksobooking" alt="">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/keksobooking-large.webp 1x">
+                <source type="image/webp" srcset="img/keksobooking-sm.webp 1x">
+
+                <source media="(min-width: 768px)" srcset="img/keksobooking-large.jpg 1x">
+                <img class="last-works__img" src="img/keksobooking-sm.jpg" width="288" height="310" loading="lazy" alt="Метки объявлений аренды жилья на карте Токио">
               </picture>
 
               <div class="last-works__block">
@@ -129,7 +147,7 @@
                 <a class="last-works__link last-works__link--demo" href="https://ks123kirill.github.io/keksobooking/">Посмотреть демо</a>
                 <a class="last-works__link last-works__link--repo" href="https://github.com/ks123kirill/keksobooking">Посмотреть репозиторий</a>
               </div>
-              <button id="show-modal" class="button button--modal last-works__button" data-project-name="keksobooking">Узнать больше</button>
+              <button type="button" class="button button--modal last-works__button" data-project-name="keksobooking">Keksobooking &ndash; сервис объявлений</button>
             </li>
           </ul>
       </section>
@@ -137,6 +155,7 @@
 
     <footer>
       <section class="contacts wrapper" id="contacts">
+        <h2 class="visually-hidden">Контакты</h2>
         <div class="contacts__block contacts__block--socials">
           <a class="contacts__link" href="https://github.com/ks123kirill" aria-label="ссылка на GitHub">
             <svg width="50" height="50" role="img">
@@ -167,10 +186,6 @@
       </section>
     </footer>
 
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
-
     <div class="modal">
       <div class="modal__backdrop" data-dismiss="modal">
         <div class="modal__content">
@@ -183,7 +198,7 @@
       </div>
     </div>
 
-    <script src="js/modal.js"></script>
-    <script src="js/script.js" type="module"></script>
+    <script src="js/modal.min.js" defer></script>
+    <script src="js/script.min.js" defer></script>
   </body>
 </html>

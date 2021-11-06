@@ -122,7 +122,7 @@ const lastProjectsList = {
 
 // создаём модальное окно
 var modal = $modal();
-var modalsCollection = document.querySelectorAll('#show-modal');
+var modalsCollection = document.querySelectorAll('.last-works__button');
 
 modalsCollection.forEach((item) => {
   item.addEventListener('click', function(e) {
@@ -141,7 +141,7 @@ modalsCollection.forEach((item) => {
       <a class="last-works__link last-works__link--demo" href="${lastProjectsList[myProject].demo}">Посмотреть демо</a>
       <a class="last-works__link last-works__link--repo" href="${lastProjectsList[myProject].repo}">Посмотреть репозиторий</a>`
     );
-    
+
     modal.show();
 
     window.addEventListener('keydown', function(evt) {

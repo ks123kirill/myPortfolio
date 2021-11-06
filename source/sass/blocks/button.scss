@@ -1,19 +1,28 @@
 .button {
-  text-transform: uppercase;
+  font-family: $font-family-basic;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 28px;
   border: none;
   cursor: pointer;
-  transition: opacity 0.3s ease;
+  transition: all opacity 0.3s ease;
   padding: 0;
 
-  &--modal,
   &--about {
     display: inline-block;
     vertical-align: top;
+    text-transform: uppercase;
     color: var(--basic-black);
     background-color: var(--basic-color2);
     border-radius: 8px;
     padding: 10px 40px;
     margin: 10px 0;
+  }
+
+  &--modal {
+    background-color: transparent;
+    text-decoration: underline;
   }
 
   &:hover,
