@@ -531,8 +531,9 @@ a {
   .last-works__button {
     font-size: 18px; } }
 
-.form__input._error {
-  box-shadow: 0 0 15px red; }
+.form {
+  padding-top: 50px;
+  padding-bottom: 45px; }
 
 .form__body {
   position: relative; }
@@ -555,10 +556,6 @@ a {
 .form__body._sending::after {
   opacity: 1;
   visibility: visible; }
-
-.form {
-  padding-top: 50px;
-  padding-bottom: 45px; }
 
 .form__heading {
   font-weight: 600;
@@ -594,6 +591,9 @@ a {
   border-radius: 6px;
   border: 2px solid var(--basic-color1);
   padding: 15px; }
+
+.form__input._error {
+  box-shadow: 0 0 15px red; }
 
 .form__textarea {
   height: 150px;
