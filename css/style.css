@@ -100,7 +100,7 @@ a {
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 28px;
   border: none;
   cursor: pointer;
@@ -390,10 +390,11 @@ a {
   padding: 50px 0 25px 0; }
 
 .last-works h2 {
-  max-width: 288px;
   font-weight: 600;
   font-size: 24px;
   line-height: 36px;
+  color: var(--basic-black);
+  max-width: 288px;
   padding-bottom: 30px;
   margin: 0 auto; }
 
@@ -531,14 +532,15 @@ a {
     font-size: 18px; } }
 
 .form {
-  padding-top: 30px;
-  padding-bottom: 40px; }
+  padding-top: 50px;
+  padding-bottom: 45px; }
 
 .form__title {
   font-weight: 600;
   font-size: 24px;
   line-height: 36px;
-  color: var(--basic-black); }
+  color: var(--basic-black);
+  margin-top: 0; }
 
 .form__item {
   display: flex;
@@ -546,7 +548,7 @@ a {
   align-items: center;
   text-align: left;
   border: none;
-  padding: 10px; }
+  padding: 15px 0; }
 
 .form__label,
 .form__input {
@@ -572,12 +574,52 @@ a {
   height: 150px;
   resize: none; }
 
+@media (min-width: 768px) {
+  .form {
+    padding-top: 80px;
+    padding-bottom: 75px; }
+  .form__title {
+    font-size: 30px;
+    line-height: 45px; } }
+
+@media (min-width: 1024px) {
+  .form {
+    padding-top: 100px;
+    padding-bottom: 100px; }
+  .form__body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content 1fr 1fr min-content;
+    gap: 20px 30px; }
+  .form__title {
+    font-size: 55px;
+    line-height: 88px;
+    grid-column: 1/-1;
+    margin-bottom: 0; }
+  .form__item {
+    padding: 0; }
+    .form__item--1 {
+      grid-column: 1/2; }
+    .form__item--2 {
+      grid-column: 1/2; }
+    .form__item--3 {
+      grid-column: 2/-1;
+      grid-row: 2/4; }
+  .form__button {
+    max-width: 184px;
+    grid-column: 2/-1;
+    margin-left: auto;
+    margin-top: 0;
+    margin-bottom: 0; } }
+
 .contacts {
+  background-color: var(--basic-grey); }
+
+.contacts__wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--basic-grey);
   padding-top: 50px;
   padding-bottom: 35px; }
 
@@ -613,7 +655,7 @@ a {
   flex-basis: 288px; }
 
 @media (min-width: 768px) {
-  .contacts {
+  .contacts__wrapper {
     padding-top: 60px;
     padding-bottom: 50px; }
   .contacts__block--socials {
@@ -633,7 +675,7 @@ a {
     height: 35px; } }
 
 @media (min-width: 1024px) {
-  .contacts {
+  .contacts__wrapper {
     padding-top: 80px;
     padding-bottom: 55px; } }
 
