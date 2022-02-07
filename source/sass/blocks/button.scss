@@ -2,14 +2,14 @@
   font-family: $font-family-basic;
   font-weight: 400;
   font-style: normal;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 28px;
   border: none;
   cursor: pointer;
   transition: all opacity 0.3s ease;
   padding: 0;
 
-  &--about {
+  &--special {
     display: inline-block;
     vertical-align: top;
     text-transform: uppercase;

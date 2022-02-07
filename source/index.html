@@ -38,6 +38,9 @@
               <a class="main-nav__link" href="#last-works">Последние работы</a>
             </li>
             <li class="main-nav__item">
+              <a class="main-nav__link" href="#send-me">Напишите мне</a>
+            </li>
+            <li class="main-nav__item">
               <a class="main-nav__link" href="#contacts">Контакты</a>
             </li>
           </ul>
@@ -60,8 +63,8 @@
 
       <section class="about wrapper">
         <h2 class="about__heading">Обо мне</h2>
-        <p class="about__text">Привет!<br> Меня зовут Кирилл Скорописцев и я HTML-верстальщик.<br> Верстаю семантично, забочусь о доступности, использую препроцессоры, умею работать с шаблонизаторами, английский знаю на уровне B1. Мне нравится изучать новые технологии и применять их на практике.</p>
-        <a class="button button--about about__link" href="CV-test-2.pdf" download>Скачать CV</a>
+        <p class="about__text">Привет!<br> Меня зовут Кирилл Скорописцев и я занимаюсь фронтендом.<br>Изучаю JavaScript, верстаю семантично, забочусь о доступности, использую препроцессоры, английский язык знаю на уровне Basic. Мне нравится изучать новые технологии и применять их на практике.</p>
+        <a class="button button--special about__link" href="CV junior frontend developer Skoropistsev Kirill.pdf" download>Скачать CV</a>
       </section>
 
       <section class="last-works" id="last-works">
@@ -151,11 +154,31 @@
             </li>
           </ul>
       </section>
+
+      <section class="form wrapper" id="send-me">
+        <form  class="form__body" action="https://server144.hosting.reg.ru" id="form" method="POST" autocomplete="off">
+          <h2 class="form__heading">Пришлите мне письмо</h2>
+          <fieldset class="form__item form__item--1">
+            <label class="form__label" for="formName">Ваше имя:</label>
+            <input class="form__input _req" id="formName" type="text" name="name">
+          </fieldset>
+          <fieldset class="form__item form__item--2">
+            <label class="form__label" for="formEmail">Ваш E-mail:</label>
+            <input class="form__input _req _email" id="formEmail" type="text" name="email">
+          </fieldset>
+          <fieldset class="form__item form__item--3">
+            <label class="form__label" for="formMessage">Сообщение:</label>
+            <textarea class="form__input _req form__textarea" name="message" id="formMessage"></textarea>
+          </fieldset>
+          <button class="button button--special form__button" type="submit">Отправить</button>
+        </form>
+      </section>
     </main>
 
     <footer>
-      <section class="contacts wrapper" id="contacts">
-        <h2 class="visually-hidden">Контакты</h2>
+      <section class="contacts" id="contacts">
+        <div class="contacts__wrapper wrapper">
+          <h2 class="visually-hidden">Контакты</h2>
         <div class="contacts__block contacts__block--socials">
           <a class="contacts__link" href="https://github.com/ks123kirill" aria-label="ссылка на GitHub">
             <svg width="50" height="50" role="img">
@@ -183,6 +206,8 @@
             <span>+7 (917) 884-85-80</span>
           </a>
         </div>
+        </div>
+
       </section>
     </footer>
 
@@ -198,7 +223,8 @@
       </div>
     </div>
 
-    <script src="js/modal.min.js" defer></script>
-    <script src="js/script.min.js" defer></script>
+    <script src="js/modal.min.js"></script>
+    <script src="js/sendMail.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
