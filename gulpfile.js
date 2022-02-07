@@ -45,16 +45,39 @@ const html = () => {
 
 // Scripts
 
-const scripts = () => {
-  return gulp.src("source/js/*.js")
-    .pipe(gulp.dest("build/js"))
+const scriptMain = () => {
+  return gulp.src("source/js/script.js")
+    // .pipe(gulp.dest("build/js"))
     .pipe(terser())
     .pipe(rename("script.min.js"))
     .pipe(gulp.dest("build/js"))
     .pipe(sync.stream());
 }
 
-exports.scripts = scripts;
+exports.scriptMain = scriptMain;
+
+const scriptModal = () => {
+  return gulp.src("source/js/modal.js")
+    // .pipe(gulp.dest("build/js"))
+    .pipe(terser())
+    .pipe(rename("modal.min.js"))
+    .pipe(gulp.dest("build/js"))
+    .pipe(sync.stream());
+}
+
+exports.scriptModal = scriptModal;
+
+const scriptSendMail = () => {
+  return gulp.src("source/js/sendMail.js")
+    .pipe(gulp.dest("build/js"))
+    .pipe(terser())
+    .pipe(rename("sendMail.min.js"))
+    .pipe(gulp.dest("build/js"))
+    .pipe(sync.stream());
+}
+
+exports.scriptSendMail = scriptSendMail;
+
 
 // Images
 
@@ -71,7 +94,7 @@ const optimizeImages = () => {
 exports.images = optimizeImages;
 
 const copyImages = () => {
-  return gulp.src("source/img/**/*.{png,jpg,svg}")
+  return gulp.src("source/img/**/*.{png,jpg,svg,gif}")
     .pipe(gulp.dest("build/img"))
 }
 
@@ -104,13 +127,13 @@ exports.sprite = sprite;
 
 const copy = (done) => {
   gulp.src([
-    "source/js/modal.min.js",
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
     "source/*.pdf",
     "source/img/**/*.svg",
     "!source/img/icons/*.svg",
-    "source/*.webmanifest"
+    "source/*.webmanifest",
+    "source/PHPMailer/**/*"
   ], {
     base: "source"
   })
@@ -153,8 +176,9 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series(styles));
-  gulp.watch("source/js/script.js", gulp.series(scripts));
-  gulp.watch("source/js/modal.js", gulp.series(scripts));
+  gulp.watch("source/js/script.js", gulp.series(scriptMain));
+  gulp.watch("source/js/modal.js", gulp.series(scriptModal));
+  gulp.watch("source/js/sendMail.js", gulp.series(scriptSendMail));
   gulp.watch("source/*.html", gulp.series(html, reload));
 }
 
@@ -167,7 +191,9 @@ const build = gulp.series(
   gulp.parallel(
     styles,
     html,
-    scripts,
+    scriptMain,
+    scriptModal,
+    scriptSendMail,
     sprite,
     createWebp
   ),
@@ -186,7 +212,9 @@ exports.default = gulp.series(
   gulp.parallel(
     styles,
     html,
-    scripts,
+    scriptMain,
+    scriptModal,
+    scriptSendMail,
     sprite,
     createWebp
   ),

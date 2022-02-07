@@ -1,4 +1,8 @@
 .contacts {
+  background-color: var(--basic-grey);
+}
+
+.contacts__wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -53,7 +57,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .contacts {
+  .contacts__wrapper {
     padding-top: 60px;
     padding-bottom: 50px;
   }
@@ -87,7 +91,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .contacts {
+  .contacts__wrapper {
     padding-top: 80px;
     padding-bottom: 55px;
   }

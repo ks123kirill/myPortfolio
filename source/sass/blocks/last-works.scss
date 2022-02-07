@@ -4,10 +4,8 @@
 }
 
 .last-works h2 {
+  @include heading-s();
   max-width: 288px;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 36px;
   padding-bottom: 30px;
   margin: 0 auto;
 }
@@ -121,9 +119,8 @@
   }
 
   .last-works h2 {
+    @include heading-m();
     max-width: 626px;
-    font-size: 30px;
-    line-height: 45px;
     padding-bottom: 40px;
   }
 
@@ -166,9 +163,8 @@
   }
 
   .last-works h2 {
+    @include heading-l();
     max-width: 826px;
-    font-size: 55px;
-    line-height: 80px;
     padding-bottom: 40px;
   }
 
