@@ -596,6 +596,10 @@ a {
     line-height: 88px;
     grid-column: 1/-1;
     margin-bottom: 0; }
+  .form__label {
+    font-size: 18px; }
+  .form__input {
+    font-size: 18px; }
   .form__item {
     padding: 0; }
     .form__item--1 {
