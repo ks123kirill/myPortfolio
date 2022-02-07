@@ -486,9 +486,9 @@ a {
     padding-top: 80px;
     padding-bottom: 80px; }
   .last-works h2 {
-    max-width: 626px;
     font-size: 30px;
     line-height: 45px;
+    max-width: 626px;
     padding-bottom: 40px; }
   .last-works__block {
     display: none; }
@@ -517,9 +517,9 @@ a {
     padding-top: 100px;
     padding-bottom: 100px; }
   .last-works h2 {
-    max-width: 826px;
     font-size: 55px;
-    line-height: 80px;
+    line-height: 88px;
+    max-width: 826px;
     padding-bottom: 40px; }
   .last-works__list {
     max-width: 826px;
@@ -535,7 +535,7 @@ a {
   padding-top: 50px;
   padding-bottom: 45px; }
 
-.form__title {
+.form__heading {
   font-weight: 600;
   font-size: 24px;
   line-height: 36px;
@@ -578,7 +578,7 @@ a {
   .form {
     padding-top: 80px;
     padding-bottom: 75px; }
-  .form__title {
+  .form__heading {
     font-size: 30px;
     line-height: 45px; } }
 
@@ -591,7 +591,7 @@ a {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content 1fr 1fr min-content;
     gap: 20px 30px; }
-  .form__title {
+  .form__heading {
     font-size: 55px;
     line-height: 88px;
     grid-column: 1/-1;
