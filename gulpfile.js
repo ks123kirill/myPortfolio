@@ -133,7 +133,8 @@ const copy = (done) => {
     "source/img/**/*.svg",
     "!source/img/icons/*.svg",
     "source/*.webmanifest",
-    "source/PHPMailer/**/*"
+    "source/PHPMailer/**/*",
+    "source/sendMail.php"
   ], {
     base: "source"
   })

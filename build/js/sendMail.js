@@ -1,3 +1,32 @@
+const ALERT_SHOW_TIME = 3000;
+
+const showAlert = (message) => {
+  const alertContainer = document.createElement('div');
+  alertContainer.style.width = '500px';
+  alertContainer.style.height = '200px';
+  alertContainer.style.backgroundColor = '#c9ccd4';
+  alertContainer.style.zIndex = 1000;
+  alertContainer.style.position = 'fixed';
+  alertContainer.style.top = 0;
+  alertContainer.style.bottom = 0;
+  alertContainer.style.left = 0;
+  alertContainer.style.right = 0;
+  alertContainer.style.margin = 'auto';
+  alertContainer.style.padding = '80px 50px';
+  alertContainer.style.fontSize = '20px';
+  alertContainer.style.textAlign = 'center';
+  alertContainer.style.color = '#48494d';
+  alertContainer.style.borderRadius = '6px';
+
+  alertContainer.textContent = message;
+  document.body.append(alertContainer);
+
+  setTimeout(() => {
+    alertContainer.remove();
+  }, ALERT_SHOW_TIME);
+};
+
+
 const form = document.getElementById('form');
 form.addEventListener('submit', formSend);
 
@@ -10,26 +39,25 @@ async function formSend(evt) {
 
   if (error === 0) {
     form.classList.add('_sending');
-    let response = await fetch('???',
+    let response = await fetch('sendMail.php',
     {
       method: 'POST',
       body: formData
     });
     if (response.ok) {
-      console.log('response ok');
-    //   let result = await response.json();
-    //   alert(result.message);
-      form.reset;
+      let result = await response.json();
+      showAlert(result.message);
+      form.reset();
       form.classList.remove('_sending');
     }
     else {
-      alert('ошибка');
+      showAlert('Какая то ошибка.\nДанные не отправлены :(');
       form.classList.remove('_sending');
     }
   }
-  // else {
-  //   alert('Заполните поля');
-  // }
+  else {
+    showAlert('Заполните\nполя');
+  }
 }
 
 function formValidate(form) {
@@ -52,7 +80,6 @@ function formValidate(form) {
       }
     }
   }
-  // console.log('error: ' + error);
   return error;
 }
 
