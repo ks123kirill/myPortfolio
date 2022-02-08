@@ -51,12 +51,12 @@ async function formSend(evt) {
       form.classList.remove('_sending');
     }
     else {
-      alert('ошибка');
+      showAlert('Какая то ошибка.\nДанные не отправлены :(');
       form.classList.remove('_sending');
     }
   }
   else {
-    alert('Заполните поля');
+    showAlert('Заполните\nполя');
   }
 }
 
