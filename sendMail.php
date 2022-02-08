@@ -11,11 +11,11 @@
   $mail->IsHTML(true);
 
   // от кого письмо
-  $mail->setFrom('info@fls.guru', 'Фрилансер по жизни');
+  $mail->setFrom('ks123kirill@gmail.com', 'Портфолио kirillskoropistsev.ru');
   // кому отправить письмо
   $mail->addAddress('ks123kirill@gmail.com');
   // тема письма
-  $mail->Subject = 'Привет! Это письмо с сайта портфолио kirillskoropistsev.ru';
+  $mail->Subject = 'Привет, Бро! Вскрывай скорее!!!';
 
   // тело письма
   $body = '<h1> Встречай супер письмо!';
