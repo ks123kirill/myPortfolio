@@ -10,15 +10,15 @@ async function formSend(evt) {
 
   if (error === 0) {
     form.classList.add('_sending');
-    let response = await fetch('???',
+    let response = await fetch('sendMail.php',
     {
       method: 'POST',
       body: formData
     });
     if (response.ok) {
       console.log('response ok');
-    //   let result = await response.json();
-    //   alert(result.message);
+      let result = await response.json();
+      alert(result.message);
       form.reset;
       form.classList.remove('_sending');
     }
@@ -27,9 +27,9 @@ async function formSend(evt) {
       form.classList.remove('_sending');
     }
   }
-  // else {
-  //   alert('Заполните поля');
-  // }
+  else {
+    alert('Заполните поля');
+  }
 }
 
 function formValidate(form) {
