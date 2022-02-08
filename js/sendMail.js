@@ -45,8 +45,9 @@ async function formSend(evt) {
     });
     if (response.ok) {
       let result = await response.json();
-      showAlert(result.message);
-      // alert(result.message);
+      alert(result.message);
+      showAlert('Данные точно отправлены!');
+      console.log(result.message);
       form.reset();
       form.classList.remove('_sending');
     }
