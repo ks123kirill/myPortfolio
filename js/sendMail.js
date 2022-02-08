@@ -16,7 +16,6 @@ async function formSend(evt) {
       body: formData
     });
     if (response.ok) {
-      console.log('response ok');
       let result = await response.json();
       alert(result.message);
       form.reset;
@@ -52,7 +51,6 @@ function formValidate(form) {
       }
     }
   }
-  // console.log('error: ' + error);
   return error;
 }
 
