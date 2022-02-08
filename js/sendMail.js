@@ -1,12 +1,12 @@
-const ALERT_SHOW_TIME = 5000;
+const ALERT_SHOW_TIME = 3000;
 
 const showAlert = (message) => {
   const alertContainer = document.createElement('div');
   alertContainer.style.width = '500px';
   alertContainer.style.height = '200px';
-  alertContainer.style.backgroundColor = '#353535';
+  alertContainer.style.backgroundColor = '#c9ccd4';
   alertContainer.style.zIndex = 1000;
-  alertContainer.style.position = 'absolute';
+  alertContainer.style.position = 'fixed';
   alertContainer.style.top = 0;
   alertContainer.style.bottom = 0;
   alertContainer.style.left = 0;
@@ -15,7 +15,8 @@ const showAlert = (message) => {
   alertContainer.style.padding = '80px 50px';
   alertContainer.style.fontSize = '20px';
   alertContainer.style.textAlign = 'center';
-  alertContainer.style.color = 'white';
+  alertContainer.style.color = '#48494d';
+  alertContainer.style.borderRadius = '6px';
 
   alertContainer.textContent = message;
   document.body.append(alertContainer);
@@ -45,9 +46,7 @@ async function formSend(evt) {
     });
     if (response.ok) {
       let result = await response.json();
-      alert(result.message);
-      showAlert('Данные точно отправлены!');
-      console.log(result.message);
+      showAlert(result.message);
       form.reset();
       form.classList.remove('_sending');
     }
