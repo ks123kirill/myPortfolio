@@ -58,7 +58,7 @@ exports.scriptMain = scriptMain;
 
 const scriptModal = () => {
   return gulp.src("source/js/modal.js")
-    // .pipe(gulp.dest("build/js"))
+    .pipe(gulp.dest("build/js"))
     .pipe(terser())
     .pipe(rename("modal.min.js"))
     .pipe(gulp.dest("build/js"))
