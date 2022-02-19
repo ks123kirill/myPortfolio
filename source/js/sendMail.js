@@ -2,30 +2,41 @@ const ALERT_SHOW_TIME = 3000;
 
 const showAlert = (message) => {
   const alertContainer = document.createElement('div');
-  alertContainer.style.width = '500px';
-  alertContainer.style.height = '200px';
-  alertContainer.style.backgroundColor = '#c9ccd4';
+  alertContainer.style.display = 'flex'
+  alertContainer.style.maxWidth = '540px';
+  alertContainer.style.maxHeight = '240px';
+  alertContainer.style.backgroundColor = 'transparent';
   alertContainer.style.zIndex = 1000;
   alertContainer.style.position = 'fixed';
   alertContainer.style.top = 0;
   alertContainer.style.bottom = 0;
   alertContainer.style.left = 0;
   alertContainer.style.right = 0;
-  alertContainer.style.margin = 'auto';
-  alertContainer.style.padding = '80px 50px';
   alertContainer.style.fontSize = '20px';
   alertContainer.style.textAlign = 'center';
   alertContainer.style.color = '#48494d';
-  alertContainer.style.borderRadius = '6px';
+  alertContainer.style.padding = '20px 20px';
+  alertContainer.style.margin = 'auto';
 
-  alertContainer.textContent = message;
+  const alertContent = document.createElement('div');
+  alertContent.style.display = 'flex';
+  alertContent.style.justifyContent = 'center';
+  alertContent.style.alignItems = 'center';
+  alertContent.style.flexBasis = "100%";
+  alertContent.textContent = message;
+  alertContent.style.backgroundColor = '#fff';
+  alertContent.style.border = '3px solid rgb(181, 195, 214)';
+  alertContent.style.borderRadius = '10px';
+  alertContent.style.boxShadow = '0px 0px 9px 4px rgba(162, 129, 129, 0.5)';
+  alertContent.style.padding = '20px 20px';
+
+  alertContainer.prepend(alertContent);
   document.body.append(alertContainer);
 
   setTimeout(() => {
     alertContainer.remove();
   }, ALERT_SHOW_TIME);
 };
-
 
 const form = document.getElementById('form');
 form.addEventListener('submit', formSend);
@@ -51,12 +62,13 @@ async function formSend(evt) {
       form.classList.remove('_sending');
     }
     else {
-      showAlert('Какая то ошибка.\nДанные не отправлены :(');
+      // showAlert(result.message);
+      showAlert('Какая то ошибка. Данные не отправлены :(');
       form.classList.remove('_sending');
     }
   }
   else {
-    showAlert('Заполните\nполя');
+    showAlert('Заполните поля');
   }
 }
 
