@@ -15,8 +15,6 @@
   margin: 0 auto;
 }
 
-@media (max-width: $desktop-width - 1px) {
-  .page-body--no-scroll {
-    overflow: hidden;
-  }
+.page-body--no-scroll {
+  overflow: hidden;
 }
